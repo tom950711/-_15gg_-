@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/Editmyinformation"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:text="개인정보 수정"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center|left"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toEndOf="@+id/gender"
+            app:layout_constraintTop_toBottomOf="@+id/input_Rn">
+
+            <RadioButton
+                android:id="@+id/input_male"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginStart="30dp"
+                android:layout_weight="1"
+                android:text="남"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/input_female"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginEnd="16dp"
+                android:layout_weight="1"
+                android:text="여"
+                android:textStyle="bold" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/Name"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="이름"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/gender"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="성별"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/residentNumber" />
+
+        <TextView
+            android:id="@+id/residentNumber"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="주민등록번호"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Name" />
+
+        <TextView
+            android:id="@+id/PhoneNumber"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="휴대폰번호"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gender" />
+
+        <TextView
+            android:id="@+id/Address"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="주소"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/PhoneNumber" />
+
+        <EditText
+            android:id="@+id/inputName"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="홍길동"
+            android:inputType="textPersonName"
+            app:layout_constraintStart_toEndOf="@+id/Name"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/input_Rn"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="19000101"
+            android:inputType="numberSigned"
+            app:layout_constraintStart_toEndOf="@+id/residentNumber"
+            app:layout_constraintTop_toBottomOf="@+id/inputName" />
+
+        <Button
+            android:id="@+id/NextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="68dp"
+            android:text="완료"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/input_phonenumber"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:inputType="phone"
+            app:layout_constraintStart_toEndOf="@+id/PhoneNumber"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+        <EditText
+            android:id="@+id/input_address"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:inputType="textPostalAddress"
+            app:layout_constraintStart_toEndOf="@+id/Address"
+            app:layout_constraintTop_toBottomOf="@+id/input_phonenumber" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginBottom="229dp"
+            android:gravity="center"
+            android:text="장애 유무"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/moneyText" />
+
+        <TextView
+            android:id="@+id/moneyText"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginBottom="229dp"
+            android:gravity="center"
+            android:text="저소득층"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginBottom="229dp"
+            android:gravity="center"
+            android:text="자녀 유무"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView13" />
+
+        <CheckBox
+            android:id="@+id/MoneyBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="61dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/moneyText" />
+
+        <CheckBox
+            android:id="@+id/DisabledBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="86dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toEndOf="@+id/MoneyBox"
+            app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+        <CheckBox
+            android:id="@+id/ChildBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="88dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toEndOf="@+id/DisabledBox"
+            app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <Button
+        android:id="@+id/chatBotButton"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="56dp"
+        android:background="@color/white"
+        android:text="챗봇 시작하기 >"
+        android:textColor="#0042FF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/mybutton"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="32dp"
+        android:background="@color/white"
+        android:text="나에게 맞는 복지 >"
+        android:textColor="#0042FF"
+        app:layout_constraintBottom_toTopOf="@+id/chatBotButton"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.romainpiel.shimmer.ShimmerTextView
+        android:id="@+id/shimmer_tv1"
+        android:layout_width="370dp"
+        android:layout_height="173dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="16dp"
+        android:text="특히 정보 취약 계층에서 이러한 현상이 자주 나타나는데,
+         우리는 이러한 복지 사각지대와 복지 소외계층을 위해 자신에게 맞는 복지를 쉽고 빠르게 찾을 수 있는 챗봇 기반의 개인 맞춤형 복지 알림 모바일 애플리케이션을 제공하려 한다. "
+        android:textColor="#444"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/shimmer_tv" />
+
+    <com.romainpiel.shimmer.ShimmerTextView
+        android:id="@+id/shimmer_tv"
+        android:layout_width="370dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="270dp"
+        android:layout_marginEnd="16dp"
+        android:text="우리나라가 다양한 복지 혜택을 제공하고 있음에도 불구하고, 여전히 우리 사회에서는 복지 사각지대가 존재한다."
+        android:textColor="#444"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="239dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="86dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/shimmer_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/robot" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
